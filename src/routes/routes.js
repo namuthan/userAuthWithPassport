@@ -13,13 +13,12 @@ module.exports = (app, passport) => {
     })
 
     app.get('/register', (req, res) => {
-        res.render('pages/register.ejs', { req: req })
+        res.render('pages/register.ejs', { req: req, messages: req.flash('registerMessage') })
     })
 
     app.get('/profile', isAuthenticated, (req, res) => {
         res.render('pages/profile.ejs', { req: req })
     })
-
     
 
 

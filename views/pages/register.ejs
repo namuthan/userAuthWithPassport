@@ -12,6 +12,12 @@
                     <h3>Register</h3>
                     <hr>
 
+                    <% if(messages.length > 0) { %>
+                        <div class="alert alert-danger">
+                            <%= messages %>
+                        </div>
+                    <% } %>
+
                     <form action="/register" method="POST">
 
                         <div class="form-group">
